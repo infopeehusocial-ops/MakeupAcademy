@@ -1,0 +1,75 @@
+import type { Config } from "tailwindcss";
+
+export default {
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "primary-fixed-dim": "#e6c364",
+        "inverse-primary": "#755b00",
+        "surface-container-lowest": "#0e0e0e",
+        "on-surface": "#e5e2e1",
+        "on-primary": "#3d2e00",
+        "surface-dim": "#131313",
+        "on-tertiary-container": "#2e3b77",
+        "error": "#ffb4ab",
+        "on-primary-container": "#503d00",
+        "surface-container": "#201f1f",
+        "inverse-surface": "#e5e2e1",
+        "on-primary-fixed": "#241a00",
+        "primary-fixed": "#ffe08f",
+        "on-tertiary-fixed": "#041451",
+        "on-tertiary": "#1e2b66",
+        "primary-container": "#c9a84c",
+        "secondary": "#e1c469",
+        "on-error": "#690005",
+        "tertiary-fixed-dim": "#b9c3ff",
+        "background": "#131313",
+        "on-surface-variant": "#d0c5b2",
+        "surface": "#131313",
+        "on-primary-fixed-variant": "#584400",
+        "surface-variant": "#353534",
+        "secondary-fixed": "#ffe082",
+        "on-background": "#e5e2e1",
+        "on-secondary-fixed-variant": "#564500",
+        "inverse-on-surface": "#313030",
+        "on-secondary-container": "#eccf73",
+        "tertiary-fixed": "#dde1ff",
+        "surface-container-low": "#1c1b1b",
+        "on-secondary-fixed": "#231b00",
+        "surface-tint": "#e6c364",
+        "outline": "#99907e",
+        "surface-container-highest": "#353534",
+        "secondary-fixed-dim": "#e1c469",
+        "on-error-container": "#ffdad6",
+        "tertiary-container": "#9ba8eb",
+        "secondary-container": "#6c5701",
+        "on-secondary": "#3c2f00",
+        "surface-bright": "#3a3939",
+        "on-tertiary-fixed-variant": "#35437e",
+        "surface-container-high": "#2a2a2a",
+        "primary": "#e6c364",
+        "tertiary": "#b9c4ff",
+        "outline-variant": "#4d4637",
+        "error-container": "#93000a"
+      },
+      borderRadius: {
+        "DEFAULT": "0px",
+        "lg": "0px",
+        "xl": "0px",
+        "full": "0px"
+      },
+      fontFamily: {
+        "headline": ["var(--font-manrope)", "sans-serif"],
+        "body": ["var(--font-manrope)", "sans-serif"],
+        "label": ["var(--font-manrope)", "sans-serif"]
+      }
+    },
+  },
+  plugins: [],
+} satisfies Config;
