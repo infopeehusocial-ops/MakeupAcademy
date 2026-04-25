@@ -43,8 +43,8 @@ export default function Admissions() {
   };
 
   return (
-    <div className="bg-[#0a0a0a] text-white antialiased min-h-screen pt-32 lowercase-disabled">
-      <div className="max-w-[1920px] mx-auto px-8 lg:px-16 grid grid-cols-1 lg:grid-cols-12 gap-20 py-24">
+    <div className="bg-[#0a0a0a] text-white antialiased min-h-screen pt-20 md:pt-32 lowercase-disabled">
+      <div className="max-w-[1920px] mx-auto px-6 md:px-16 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-20 py-12 md:py-24">
         {/* Left Column: context */}
         <div className="lg:col-span-5 fade-up">
           <span className="font-label text-xs tracking-[0.4em] text-primary uppercase mb-6 block">Admissions 2024</span>
@@ -75,29 +75,29 @@ export default function Admissions() {
         {/* Right Column: Multi-step form */}
         <div className="lg:col-span-7">
           {submitted ? (
-             <div className="bg-[#141414] p-16 lg:p-24 border border-white/5 text-center flex flex-col items-center justify-center min-h-[600px] fade-up luxury-card">
-                <div className="w-20 h-20 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center mb-10 pulse-ring">
-                  <span className="material-symbols-outlined text-4xl text-primary">check_circle</span>
+             <div className="bg-[#141414] p-8 md:p-16 lg:p-24 border border-white/5 text-center flex flex-col items-center justify-center min-h-[500px] md:min-h-[600px] fade-up luxury-card">
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center mb-8 md:mb-10 pulse-ring">
+                  <span className="material-symbols-outlined text-3xl md:text-4xl text-primary">check_circle</span>
                 </div>
-                <h2 className="font-headline text-4xl font-bold mb-6 gold-shimmer uppercase tracking-widest">Inquiry Received</h2>
-                <p className="font-body text-white/40 max-w-sm mx-auto mb-16 leading-relaxed">Our admissions director will contact you within 24 hours to schedule your portfolio review.</p>
+                <h2 className="font-headline text-3xl md:text-4xl font-bold mb-6 gold-shimmer uppercase tracking-widest px-4">Inquiry Received</h2>
+                <p className="font-body text-sm md:text-base text-white/40 max-w-sm mx-auto mb-12 md:mb-16 leading-relaxed">Our admissions director will contact you within 24 hours to schedule your portfolio review.</p>
                 <button 
                   onClick={() => { setSubmitted(false); setCurrentStep(0); }}
-                  className="px-12 py-5 border border-primary/30 text-primary font-bold text-xs uppercase tracking-[0.2em] gold-button-glow transition-all"
+                  className="w-full sm:w-auto px-12 py-5 border border-primary/30 text-primary font-bold text-xs uppercase tracking-[0.2em] gold-button-glow transition-all"
                 >
                   New inquiry
                 </button>
              </div>
           ) : (
-            <div className="bg-[#141414] p-10 lg:p-16 border border-white/5 luxury-card relative overflow-hidden fade-up">
-               <div className="flex justify-between items-end mb-16 border-b border-white/5 pb-10">
+            <div className="bg-[#141414] p-6 md:p-10 lg:p-16 border border-white/5 luxury-card relative overflow-hidden fade-up">
+               <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-12 md:mb-16 border-b border-white/5 pb-8 md:pb-10 gap-6">
                   <div>
-                    <h2 className="font-headline text-2xl font-bold uppercase tracking-widest text-white">Academy Inquiry</h2>
-                    <p className="text-[10px] text-white/30 mt-2 uppercase tracking-[0.2em]">Step {currentStep + 1} of 03</p>
+                    <h2 className="font-headline text-xl md:text-2xl font-bold uppercase tracking-widest text-white">Academy Inquiry</h2>
+                    <p className="text-[9px] md:text-[10px] text-white/30 mt-2 uppercase tracking-[0.2em]">Step {currentStep + 1} of 03</p>
                   </div>
-                  <div className="flex gap-2">
+                  <div className="flex gap-1.5 md:gap-2 w-full sm:w-auto">
                     {[0,1,2].map(s => (
-                       <div key={s} className={`h-1 w-8 sm:w-16 transition-all duration-700 ${s <= currentStep ? 'bg-primary' : 'bg-white/5'}`}></div>
+                       <div key={s} className={`h-1 flex-1 sm:w-16 transition-all duration-700 ${s <= currentStep ? 'bg-primary' : 'bg-white/5'}`}></div>
                     ))}
                   </div>
                </div>
@@ -105,24 +105,24 @@ export default function Admissions() {
                <form onSubmit={handleSubmit} className="min-h-[350px] flex flex-col justify-between">
                   <div className="overflow-hidden relative">
                     {/* Step 1 */}
-                    <div className={`space-y-12 transition-all duration-700 ${currentStep === 0 ? 'opacity-100 translate-x-0' : 'opacity-0 absolute inset-0 -translate-x-full pointer-events-none'}`}>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                        <div className="space-y-4">
+                     <div className={`space-y-8 md:space-y-12 transition-all duration-700 ${currentStep === 0 ? 'opacity-100 translate-x-0' : 'opacity-0 absolute inset-0 -translate-x-full pointer-events-none'}`}>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+                        <div className="space-y-3 md:space-y-4">
                           <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/30">Your Name</label>
-                          <input name="name" required value={formData.name} onChange={handleInputChange} className="w-full bg-transparent border-b border-white/10 focus:border-primary px-0 py-4 text-xl outline-none transition-all placeholder:text-white/10" placeholder="Full name" />
+                          <input name="name" required value={formData.name} onChange={handleInputChange} className="w-full bg-transparent border-b border-white/10 focus:border-primary px-0 py-3 md:py-4 text-lg md:text-xl outline-none transition-all placeholder:text-white/10" placeholder="Full name" />
                         </div>
-                        <div className="space-y-4">
+                        <div className="space-y-3 md:space-y-4">
                           <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/30">Contact Number</label>
-                          <input name="phone" required value={formData.phone} onChange={handleInputChange} className="w-full bg-transparent border-b border-white/10 focus:border-primary px-0 py-4 text-xl outline-none transition-all placeholder:text-white/10" placeholder="+91" />
+                          <input name="phone" required value={formData.phone} onChange={handleInputChange} className="w-full bg-transparent border-b border-white/10 focus:border-primary px-0 py-3 md:py-4 text-lg md:text-xl outline-none transition-all placeholder:text-white/10" placeholder="+91" />
                         </div>
                       </div>
                     </div>
 
                     {/* Step 2 */}
-                    <div className={`space-y-12 transition-all duration-700 ${currentStep === 1 ? 'opacity-100 translate-x-0' : 'opacity-0 absolute inset-0 translate-x-full pointer-events-none'}`}>
-                      <div className="space-y-4">
+                     <div className={`space-y-8 md:space-y-12 transition-all duration-700 ${currentStep === 1 ? 'opacity-100 translate-x-0' : 'opacity-0 absolute inset-0 translate-x-full pointer-events-none'}`}>
+                      <div className="space-y-3 md:space-y-4">
                         <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/30">Select Program</label>
-                        <select name="program" required value={formData.program} onChange={handleInputChange} className="w-full bg-transparent border-b border-white/10 focus:border-primary px-0 py-4 text-xl outline-none transition-all appearance-none cursor-pointer">
+                        <select name="program" required value={formData.program} onChange={handleInputChange} className="w-full bg-transparent border-b border-white/10 focus:border-primary px-0 py-3 md:py-4 text-lg md:text-xl outline-none transition-all appearance-none cursor-pointer">
                           <option value="" disabled className="bg-[#141414]">Focus of study</option>
                           <option value="bridal" className="bg-[#141414]">Advanced Bridal (12 Weeks)</option>
                           <option value="airbrush" className="bg-[#141414]">HD Airbrush Mastery (8 Weeks)</option>
@@ -132,28 +132,28 @@ export default function Admissions() {
                     </div>
 
                     {/* Step 3 */}
-                    <div className={`space-y-12 transition-all duration-700 ${currentStep === 2 ? 'opacity-100 translate-x-0' : 'opacity-0 absolute inset-0 translate-x-full pointer-events-none'}`}>
-                      <div className="space-y-4">
+                     <div className={`space-y-8 md:space-y-12 transition-all duration-700 ${currentStep === 2 ? 'opacity-100 translate-x-0' : 'opacity-0 absolute inset-0 translate-x-full pointer-events-none'}`}>
+                      <div className="space-y-3 md:space-y-4">
                         <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/30">Artistic Vision / Background</label>
-                        <textarea name="vision" value={formData.vision} onChange={handleInputChange} className="w-full bg-transparent border-b border-white/10 focus:border-primary px-0 py-4 text-xl outline-none transition-all resize-none placeholder:text-white/10" rows={2} placeholder="Share your experience or goals" />
+                        <textarea name="vision" value={formData.vision} onChange={handleInputChange} className="w-full bg-transparent border-b border-white/10 focus:border-primary px-0 py-3 md:py-4 text-lg md:text-xl outline-none transition-all resize-none placeholder:text-white/10" rows={2} placeholder="Share your experience or goals" />
                       </div>
                       <div className="flex items-center gap-4 group cursor-pointer" onClick={() => handleInputChange({ target: { name: 'callback', value: !formData.callback, type: 'checkbox', checked: !formData.callback } } as any)}>
                          <div className={`w-5 h-5 border flex items-center justify-center transition-all ${formData.callback ? 'bg-primary border-primary' : 'border-white/20'}`}>
                             {formData.callback && <span className="material-symbols-outlined text-black text-sm font-bold">check</span>}
                          </div>
-                         <label className="text-[10px] uppercase tracking-[0.2em] text-white/50 cursor-pointer">Request immediate callback</label>
+                         <label className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] text-white/50 cursor-pointer">Request immediate callback</label>
                       </div>
                     </div>
                   </div>
 
-                  <div className="flex gap-6 mt-20">
+                  <div className="flex flex-col sm:flex-row gap-4 md:gap-6 mt-16 md:mt-20">
                     {currentStep > 0 && (
-                      <button onClick={prevStep} type="button" className="px-10 py-5 border border-white/10 text-white/50 text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-white/5 transition-all">Previous</button>
+                      <button onClick={prevStep} type="button" className="w-full sm:w-auto px-10 py-5 border border-white/10 text-white/50 text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-white/5 transition-all">Previous</button>
                     )}
                     {currentStep < 2 ? (
-                      <button onClick={nextStep} type="button" className="flex-1 bg-primary text-black py-5 text-[10px] font-bold uppercase tracking-[0.2em] gold-button-glow transition-all">Continue</button>
+                      <button onClick={nextStep} type="button" className="w-full flex-1 bg-primary text-black py-5 text-[10px] font-bold uppercase tracking-[0.2em] gold-button-glow transition-all">Continue</button>
                     ) : (
-                      <button type="submit" className="flex-1 bg-primary text-black py-5 text-[10px] font-bold uppercase tracking-[0.2em] gold-button-glow pulse-ring transition-all">Submit Enrollment</button>
+                      <button type="submit" className="w-full flex-1 bg-primary text-black py-5 text-[10px] font-bold uppercase tracking-[0.2em] gold-button-glow pulse-ring transition-all">Submit Enrollment</button>
                     )}
                   </div>
                </form>

@@ -4,6 +4,7 @@ import Image from "next/image";
 import "./globals.css";
 import AnimationProvider from "@/components/AnimationProvider";
 import Header from "@/components/Header";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -34,6 +35,8 @@ export default function RootLayout({
         <main className="pt-24 min-h-screen">
           {children}
         </main>
+
+        <WhatsAppButton />
 
         {/* Footer */}
         <footer className="bg-[#0e0e0e] w-full pt-20 pb-10 border-t border-white/5">

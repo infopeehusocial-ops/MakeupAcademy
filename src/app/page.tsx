@@ -37,7 +37,7 @@ export default function Home() {
                 Peehu Deka <br />
                 <span className="gold-shimmer">Makeup Academy</span>
               </h1>
-              <p className="font-headline text-xl md:text-3xl text-primary/80 mb-8 italic font-light tracking-wide">
+              <p className="font-headline text-xl md:text-3xl text-primary/80 mb-8 italic font-light tracking-wide pr-4">
                 Best Makeup Academy in Guwahati
               </p>
             </div>
@@ -70,13 +70,13 @@ export default function Home() {
       </div>
 
       {/* About Section on Home */}
-      <section className="py-24 lg:py-40 bg-[#0a0a0a] relative overflow-hidden">
+      <section className="py-16 md:py-32 bg-[#0a0a0a] relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
             <div className="fade-up text-center lg:text-left">
               <span className="font-label text-xs tracking-[0.4em] text-primary uppercase mb-6 block">Our Legacy</span>
               <h2 className="font-headline text-3xl md:text-6xl font-bold mb-8 md:mb-10 tracking-tight leading-tight uppercase">
-                About Peehu Deka <br /><span className="gold-shimmer italic font-light">Makeup Academy</span>
+                About Peehu Deka <br /><span className="gold-shimmer italic font-light pr-4">Makeup Academy</span>
               </h2>
               <div className="space-y-6 md:space-y-8 font-body text-base md:text-lg text-white/40 leading-relaxed max-w-xl mx-auto lg:mx-0">
                 <p>
@@ -85,26 +85,26 @@ export default function Home() {
                 <p>
                   We combine traditional Indian beauty techniques with modern trends to prepare students for real-world opportunities in bridal, fashion, and media industries.
                 </p>
-                <p className="border-l border-primary/30 pl-6 md:pl-8 text-white/60 italic text-left">
+                <p className="border-l border-primary/30 pl-6 md:pl-8 text-white/60 italic text-left pr-4">
                   "Our approach is simple – personalized training, hands-on experience, and complete career guidance."
                 </p>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-8 fade-up transition-delay-400">
-               <div className="bg-[#141414] p-10 border border-white/5 luxury-card">
-                  <h3 className="gold-shimmer text-5xl font-bold mb-2">10+</h3>
+            <div className="grid grid-cols-2 gap-4 md:gap-8 fade-up transition-delay-400">
+               <div className="bg-[#141414] p-6 md:p-10 border border-white/5 luxury-card">
+                  <h3 className="gold-shimmer text-4xl md:text-5xl font-bold mb-2">10+</h3>
                   <p className="font-label text-[10px] uppercase tracking-widest text-white/30">Years</p>
                </div>
-               <div className="bg-[#141414] p-10 border border-white/5 luxury-card mt-12">
-                  <h3 className="gold-shimmer text-5xl font-bold mb-2">500+</h3>
+               <div className="bg-[#141414] p-6 md:p-10 border border-white/5 luxury-card mt-8 md:mt-12">
+                  <h3 className="gold-shimmer text-4xl md:text-5xl font-bold mb-2">500+</h3>
                   <p className="font-label text-[10px] uppercase tracking-widest text-white/30">Trained</p>
                </div>
-               <div className="bg-[#141414] p-10 border border-white/5 luxury-card">
-                  <h3 className="gold-shimmer text-5xl font-bold mb-2">95%</h3>
+               <div className="bg-[#141414] p-6 md:p-10 border border-white/5 luxury-card">
+                  <h3 className="gold-shimmer text-4xl md:text-5xl font-bold mb-2">95%</h3>
                   <p className="font-label text-[10px] uppercase tracking-widest text-white/30">Placements</p>
                </div>
-               <div className="bg-[#141414] p-10 border border-white/5 luxury-card mt-12">
-                  <h3 className="gold-shimmer text-5xl font-bold mb-2">Elite</h3>
+               <div className="bg-[#141414] p-6 md:p-10 border border-white/5 luxury-card mt-8 md:mt-12">
+                  <h3 className="gold-shimmer text-4xl md:text-5xl font-bold mb-2 text-3xl sm:text-4xl md:text-5xl">Elite</h3>
                   <p className="font-label text-[10px] uppercase tracking-widest text-white/30">Artistry</p>
                </div>
             </div>
@@ -113,12 +113,12 @@ export default function Home() {
       </section>
 
       {/* Courses Section */}
-      <section className="py-24 lg:py-40 bg-[#0e0e0e] border-y border-white/5">
+      <section className="py-16 md:py-32 bg-[#0e0e0e] border-y border-white/5">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="mb-16 md:mb-32 text-center fade-up">
             <span className="font-label text-xs tracking-[0.4em] text-primary uppercase mb-6 block">Professional Training</span>
             <h2 className="font-headline text-4xl md:text-7xl font-bold mb-10 text-white uppercase tracking-tighter">
-              Makeup Courses <span className="gold-shimmer italic font-light lowercase">in Guwahati</span>
+              Makeup Courses <span className="gold-shimmer italic font-light lowercase pr-4">in Guwahati</span>
             </h2>
             <p className="font-body text-white/40 max-w-2xl mx-auto text-lg">From bridal makeup to advanced techniques, our courses are designed to build real skills and confidence.</p>
           </div>
@@ -165,7 +165,7 @@ export default function Home() {
 
 
       {/* Student Video Reviews */}
-      <section className="py-24 lg:py-40 bg-[#0a0a0a] border-y border-white/5 relative overflow-hidden">
+      <section className="py-16 md:py-32 bg-[#0a0a0a] border-y border-white/5 relative overflow-hidden">
         {/* Background Accents */}
         <div className="absolute top-0 right-0 w-1/3 h-1/2 bg-primary/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
         <div className="absolute bottom-0 left-0 w-1/3 h-1/2 bg-primary/5 blur-[120px] rounded-full translate-y-1/2 -translate-x-1/2"></div>
@@ -174,7 +174,7 @@ export default function Home() {
           <div className="text-center mb-16 md:mb-32 fade-up">
             <span className="font-label text-xs tracking-[0.4em] text-primary uppercase mb-6 block">Student Testimonials</span>
             <h2 className="font-headline text-4xl md:text-7xl font-bold mb-10 text-white uppercase tracking-tighter">
-              Student <span className="gold-shimmer italic font-light">Reviews</span>
+              Student <span className="gold-shimmer italic font-light pr-4">Reviews</span>
             </h2>
             <p className="font-body text-white/40 max-w-2xl mx-auto text-lg leading-relaxed">
               Watch the journeys of our graduates and see how they transformed their passion into professional artistry.
@@ -210,9 +210,9 @@ export default function Home() {
 
 
       {/* Final CTA Section */}
-      <section className="py-24 lg:py-40 bg-gradient-to-b from-[#0a0a0a] to-[#0e0e0e] border-t border-white/5 relative overflow-hidden">
+      <section className="py-16 md:py-32 bg-gradient-to-b from-[#0a0a0a] to-[#0e0e0e] border-t border-white/5 relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-6 md:px-8 text-center relative z-10 fade-up">
-          <h2 className="font-headline text-4xl md:text-6xl font-bold mb-10 text-white uppercase tracking-tighter leading-tight italic">
+          <h2 className="font-headline text-4xl md:text-6xl font-bold mb-10 text-white uppercase tracking-tighter leading-tight italic pr-4">
             Ready to <span className="gold-shimmer not-italic">Enroll?</span>
           </h2>
           <p className="font-body text-white/40 text-lg mb-12 max-w-2xl mx-auto">

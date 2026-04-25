@@ -36,14 +36,14 @@ export default function Header() {
         className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled ? "bg-[#0a0a0a]/95 backdrop-blur-xl py-4 border-b border-white/5" : "bg-transparent py-6"
           }`}
       >
-        <div className="flex justify-between items-center px-6 md:px-12 w-full max-w-[1920px] mx-auto">
-          <Link className="flex items-center gap-3 group transition-transform hover:scale-105" href="/">
+        <div className="flex justify-between items-center px-4 md:px-12 w-full max-w-[1920px] mx-auto">
+          <Link className="flex items-center gap-2 md:gap-3 group transition-transform hover:scale-105" href="/">
             <Image
               src="/logo.png"
               alt="Peehu's Makeover Logo"
-              width={180}
-              height={50}
-              className="h-10 md:h-12 w-auto object-contain"
+              width={160}
+              height={45}
+              className="h-8 md:h-12 w-auto object-contain"
               priority
             />
           </Link>
