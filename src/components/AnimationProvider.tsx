@@ -16,10 +16,29 @@ export default function AnimationProvider() {
       });
     }, observerOptions);
 
-    const fadeUpElements = document.querySelectorAll(".fade-up");
-    fadeUpElements.forEach((el) => observer.observe(el));
+    // Initial observation
+    const observeElements = () => {
+      const fadeUpElements = document.querySelectorAll(".fade-up:not(.visible)");
+      fadeUpElements.forEach((el) => observer.observe(el));
+    };
 
-    return () => observer.disconnect();
+    observeElements();
+
+    // Observe for new elements being added to the DOM (e.g. during filtering)
+    const mutationObserver = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.addedNodes.length) {
+          observeElements();
+        }
+      });
+    });
+
+    mutationObserver.observe(document.body, { childList: true, subtree: true });
+
+    return () => {
+      observer.disconnect();
+      mutationObserver.disconnect();
+    };
   }, []);
 
   return null;

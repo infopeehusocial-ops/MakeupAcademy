@@ -3,6 +3,7 @@ import { Manrope } from "next/font/google";
 import Image from "next/image";
 import "./globals.css";
 import AnimationProvider from "@/components/AnimationProvider";
+import Header from "@/components/Header";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -28,26 +29,7 @@ export default function RootLayout({
       </head>
       <body className={`${manrope.variable} antialiased bg-[#0a0a0a] text-[#f5f0e8] selection:bg-primary selection:text-black`}>
         <AnimationProvider />
-        {/* Navigation */}
-        <header className="fixed top-0 w-full z-50 bg-[#0a0a0a]/85 backdrop-blur-xl border-b border-white/5 transition-all duration-500">
-          <div className="flex justify-between items-center px-8 py-6 w-full max-w-[1920px] mx-auto">
-            <a className="flex items-center gap-3 group transition-transform hover:scale-105" href="/">
-              <Image src="/logo.png" alt="Peehu's Makeover Logo" width={180} height={50} className="h-12 w-auto object-contain" priority />
-            </a>
-            <nav className="hidden md:flex space-x-12">
-              <a className="nav-link font-headline tracking-[0.1em] text-xs font-semibold text-white/70 hover:text-primary transition-colors duration-500 uppercase" href="/about">Academy</a>
-              <a className="nav-link font-headline tracking-[0.1em] text-xs font-semibold text-white/70 hover:text-primary transition-colors duration-500 uppercase" href="/courses">Courses</a>
-              <a className="nav-link font-headline tracking-[0.1em] text-xs font-semibold text-white/70 hover:text-primary transition-colors duration-500 uppercase" href="/portfolio">Portfolio</a>
-              <a className="nav-link font-headline tracking-[0.1em] text-xs font-semibold text-white/70 hover:text-primary transition-colors duration-500 uppercase" href="/contact">Contact</a>
-            </nav>
-            <div className="flex items-center space-x-6">
-              <a className="hidden md:inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-primary to-primary-dark text-black font-headline uppercase tracking-widest text-xs font-bold gold-button-glow hover:opacity-90 transition-opacity duration-300" href="/admissions">Enroll Now</a>
-              <button className="md:hidden text-primary">
-                <span className="material-symbols-outlined text-3xl">menu</span>
-              </button>
-            </div>
-          </div>
-        </header>
+        <Header />
 
         <main className="pt-24 min-h-screen">
           {children}

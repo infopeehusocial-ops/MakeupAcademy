@@ -10,6 +10,10 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'i.pinimg.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'asffo800kc6xioqb.public.blob.vercel-storage.com',
       }
     ],
   },

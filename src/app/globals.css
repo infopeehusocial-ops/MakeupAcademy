@@ -152,3 +152,37 @@ body {
 .pulse-ring {
   animation: pulse-ring 2s ease-out infinite;
 }
+
+/* Luxury B&W to Color Reveal */
+.bw-reveal-image {
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: filter 2.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 2.5s cubic-bezier(0.4, 0, 0.2, 1), transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hover trigger for groups */
+.group:hover .bw-reveal-image {
+  filter: grayscale(0%) !important;
+  opacity: 1 !important;
+  transform: scale(1.05);
+}
+
+/* Scroll trigger via the 'visible' class from AnimationProvider */
+.visible .bw-reveal-image {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* On Desktop (hover support), we reset the scroll reveal to keep it B&W until manual hover */
+@media (hover: hover) {
+  .visible .bw-reveal-image:not(:hover) {
+    /* Optional: keep desktop color reveal on scroll if preferred */
+  }
+}
+
+/* Mobile specific: ensure smooth, slow reveal as user scrolls */
+@media (max-width: 1024px) {
+  .bw-reveal-image {
+    transition: filter 2.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 2s ease-out;
+  }
+}

@@ -1,4 +1,8 @@
 import Image from "next/image";
+import Script from "next/script";
+import StudentVideoCard from "@/components/StudentVideoCard";
+import HeroParticles from "@/components/HeroParticles";
+
 
 export default function Home() {
   return (
@@ -6,20 +10,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0a0a0a]">
         {/* Floating Particles */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none z-10">
-          {[...Array(12)].map((_, i) => (
-            <div 
-              key={i} 
-              className="particle" 
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animation: `float-particle ${5 + Math.random() * 5}s ease-in-out infinite`,
-                animationDelay: `${Math.random() * 5}s`
-              }}
-            />
-          ))}
-        </div>
+        <HeroParticles />
 
         <div className="absolute inset-0 z-0">
           <Image 
@@ -28,18 +19,19 @@ export default function Home() {
             src="https://i.pinimg.com/736x/97/98/80/979880aca9bde71cbf1b2dd90ce89701.jpg"
             fill
             priority
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/20 to-transparent"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-transparent to-transparent"></div>
         </div>
         
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pt-20">
-          <div className="lg:col-span-10 lg:col-start-1">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center pt-24 lg:pt-20">
+          <div className="lg:col-span-10 lg:col-start-1 text-center lg:text-left">
             <div className="fade-up">
-              <div className="flex items-center gap-4 mb-10">
-                <Image src="/logo.png" alt="Logo" width={40} height={40} className="w-10 h-10 object-contain" />
-                <span className="w-12 h-[1px] bg-primary/30"></span>
-                <p className="font-label text-xs uppercase tracking-[0.4em] text-primary">Experience Artistry</p>
+              <div className="flex items-center justify-center lg:justify-start gap-4 mb-8 md:mb-10">
+                <Image src="/logo.png" alt="Logo" width={40} height={40} className="w-8 h-8 md:w-10 md:h-10 object-contain" />
+                <span className="w-8 md:w-12 h-[1px] bg-primary/30"></span>
+                <p className="font-label text-[10px] md:text-xs uppercase tracking-[0.4em] text-primary">Experience Artistry</p>
               </div>
               <h1 className="font-headline text-5xl md:text-8xl font-bold tracking-[-0.03em] leading-[1.1] mb-10 text-on-surface">
                 Peehu Deka <br />
@@ -54,11 +46,11 @@ export default function Home() {
               Looking for the best makeup academy in Guwahati? At Peehu Deka Makeup Academy, we help you turn your passion into a professional career. Learn professional makeup artistry with expert guidance and hands-on training.
             </p>
             
-            <div className="fade-up flex flex-col sm:flex-row gap-8 transition-delay-400">
-              <a className="px-10 py-5 bg-gradient-to-r from-primary to-primary-dark text-black font-bold tracking-[0.2em] uppercase text-xs text-center gold-button-glow pulse-ring transition-all" href="/admissions">
-                Enroll Today & Start Your Career
+            <div className="fade-up flex flex-col sm:flex-row items-center lg:items-start gap-6 md:gap-8 transition-delay-400">
+              <a className="w-full sm:w-auto px-8 md:px-10 py-5 bg-gradient-to-r from-primary to-primary-dark text-black font-bold tracking-[0.2em] uppercase text-xs text-center gold-button-glow pulse-ring transition-all" href="/admissions">
+                Enroll Today
               </a>
-              <a className="px-10 py-5 border border-primary/30 text-primary font-bold tracking-[0.2em] uppercase text-xs text-center hover:bg-primary hover:text-black transition-all duration-500" href="/courses">
+              <a className="w-full sm:w-auto px-8 md:px-10 py-5 border border-primary/30 text-primary font-bold tracking-[0.2em] uppercase text-xs text-center hover:bg-primary hover:text-black transition-all duration-500" href="/courses">
                 View Courses
               </a>
             </div>
@@ -78,22 +70,22 @@ export default function Home() {
       </div>
 
       {/* About Section on Home */}
-      <section className="py-40 bg-[#0a0a0a] relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-8 relative z-10">
+      <section className="py-24 lg:py-40 bg-[#0a0a0a] relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-            <div className="fade-up">
+            <div className="fade-up text-center lg:text-left">
               <span className="font-label text-xs tracking-[0.4em] text-primary uppercase mb-6 block">Our Legacy</span>
-              <h2 className="font-headline text-4xl md:text-6xl font-bold mb-10 tracking-tight leading-tight uppercase">
+              <h2 className="font-headline text-3xl md:text-6xl font-bold mb-8 md:mb-10 tracking-tight leading-tight uppercase">
                 About Peehu Deka <br /><span className="gold-shimmer italic font-light">Makeup Academy</span>
               </h2>
-              <div className="space-y-8 font-body text-lg text-white/40 leading-relaxed max-w-xl">
+              <div className="space-y-6 md:space-y-8 font-body text-base md:text-lg text-white/40 leading-relaxed max-w-xl mx-auto lg:mx-0">
                 <p>
                   Peehu Deka Makeup Academy is a leading makeup academy in Guwahati, dedicated to training aspiring makeup artists with practical, industry-focused knowledge.
                 </p>
                 <p>
                   We combine traditional Indian beauty techniques with modern trends to prepare students for real-world opportunities in bridal, fashion, and media industries.
                 </p>
-                <p className="border-l border-primary/30 pl-8 text-white/60 italic">
+                <p className="border-l border-primary/30 pl-6 md:pl-8 text-white/60 italic text-left">
                   "Our approach is simple – personalized training, hands-on experience, and complete career guidance."
                 </p>
               </div>
@@ -121,9 +113,9 @@ export default function Home() {
       </section>
 
       {/* Courses Section */}
-      <section className="py-40 bg-[#0e0e0e] border-y border-white/5">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="mb-32 text-center fade-up">
+      <section className="py-24 lg:py-40 bg-[#0e0e0e] border-y border-white/5">
+        <div className="max-w-7xl mx-auto px-6 md:px-8">
+          <div className="mb-16 md:mb-32 text-center fade-up">
             <span className="font-label text-xs tracking-[0.4em] text-primary uppercase mb-6 block">Professional Training</span>
             <h2 className="font-headline text-4xl md:text-7xl font-bold mb-10 text-white uppercase tracking-tighter">
               Makeup Courses <span className="gold-shimmer italic font-light lowercase">in Guwahati</span>
@@ -151,7 +143,13 @@ export default function Home() {
             ].map((course, i) => (
               <div key={i} className="luxury-card bg-[#141414] p-8 border border-white/5 fade-up" style={{ transitionDelay: `${i * 0.2}s` }}>
                 <div className="aspect-[4/5] mb-8 overflow-hidden bg-[#0a0a0a] relative group">
-                  <Image alt={course.title} className="w-full h-full object-cover opacity-80 transition-transform duration-1000 group-hover:scale-110" src={course.img} fill />
+                  <Image 
+                    alt={course.title} 
+                    className="w-full h-full object-cover opacity-80 transition-transform duration-1000 group-hover:scale-110" 
+                    src={course.img} 
+                    fill 
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 </div>
                 <h3 className="font-headline text-2xl font-bold text-white mb-6 uppercase tracking-widest">{course.title}</h3>
@@ -165,47 +163,55 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Trust & Testimonials (The Legacy) */}
-      <section className="py-40 relative overflow-hidden bg-[#0a0a0a]">
-        <div className="max-w-7xl mx-auto px-8 relative z-10">
-          <div className="text-center mb-24 fade-up">
-            <h2 className="font-headline text-4xl font-bold mb-6 text-white uppercase tracking-tight">Student <span className="gold-shimmer">Success</span></h2>
-            <p className="font-body text-white/40 max-w-2xl mx-auto leading-relaxed">Join 500+ artists who launched their beauty careers with us.</p>
+
+      {/* Student Video Reviews */}
+      <section className="py-24 lg:py-40 bg-[#0a0a0a] border-y border-white/5 relative overflow-hidden">
+        {/* Background Accents */}
+        <div className="absolute top-0 right-0 w-1/3 h-1/2 bg-primary/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
+        <div className="absolute bottom-0 left-0 w-1/3 h-1/2 bg-primary/5 blur-[120px] rounded-full translate-y-1/2 -translate-x-1/2"></div>
+        
+        <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
+          <div className="text-center mb-16 md:mb-32 fade-up">
+            <span className="font-label text-xs tracking-[0.4em] text-primary uppercase mb-6 block">Student Testimonials</span>
+            <h2 className="font-headline text-4xl md:text-7xl font-bold mb-10 text-white uppercase tracking-tighter">
+              Student <span className="gold-shimmer italic font-light">Reviews</span>
+            </h2>
+            <p className="font-body text-white/40 max-w-2xl mx-auto text-lg leading-relaxed">
+              Watch the journeys of our graduates and see how they transformed their passion into professional artistry.
+            </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="fade-up luxury-card bg-white/5 backdrop-blur-3xl p-12 border border-white/10">
-              <span className="material-symbols-outlined text-primary text-5xl mb-8 opacity-40">format_quote</span>
-              <p className="font-body text-white/60 mb-10 text-lg leading-relaxed italic">"The attention to detail transformed my understanding. The HD Airbrush module is unmatched in the region."</p>
-              <div>
-                <p className="font-headline text-sm font-bold text-white tracking-widest uppercase">Ananya S.</p>
-                <p className="font-label text-[10px] uppercase tracking-[0.2em] text-primary mt-1">Lead MUA, Vogue India</p>
-              </div>
-            </div>
-            
-            <div className="fade-up luxury-card bg-white/5 backdrop-blur-3xl p-12 border border-white/10 lg:translate-y-12">
-              <span className="material-symbols-outlined text-primary text-5xl mb-8 opacity-40">format_quote</span>
-              <p className="font-body text-white/60 mb-10 text-lg leading-relaxed italic">"More than techniques, I learned the business of beauty. The placement support launched my career instantly."</p>
-              <div>
-                <p className="font-headline text-sm font-bold text-white tracking-widest uppercase">Priya R.</p>
-                <p className="font-label text-[10px] uppercase tracking-[0.2em] text-primary mt-1">Independent Artist</p>
-              </div>
-            </div>
-            
-            <div className="fade-up luxury-card bg-gradient-to-br from-[#141414] to-[#0a0a0a] p-12 flex flex-col justify-center items-center text-center border border-white/10">
-              <div className="w-16 h-16 rounded-full border border-primary/30 flex items-center justify-center mb-8 pulse-ring">
-                <span className="material-symbols-outlined text-4xl text-primary">workspace_premium</span>
-              </div>
-              <h3 className="font-headline text-xl font-bold text-white mb-4 uppercase tracking-wider">Internationally Certified</h3>
-              <p className="font-body text-white/40 text-sm leading-relaxed">Our curriculum aligns with global standards, ensuring your certification holds weight worldwide.</p>
-            </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
+            <StudentVideoCard 
+              videoUrl="https://asffo800kc6xioqb.public.blob.vercel-storage.com/67DA1573-1D3A-46D5-A7B5-BBBD0A6A9889.mov"
+              title="Featured Success Story"
+              delay="0.1s"
+            />
+            <StudentVideoCard 
+              videoUrl="https://asffo800kc6xioqb.public.blob.vercel-storage.com/video-output-3A16389F-C9E9-46B3-A0FE-B143DB4AFDB8-1.mov"
+              title="Student Journey"
+              delay="0.2s"
+            />
+            <StudentVideoCard 
+              videoUrl="https://asffo800kc6xioqb.public.blob.vercel-storage.com/video-output-3BC8ADD5-CFE1-41B8-8F8A-CFC15986FFAC-1.mov"
+              title="Artist Transformation"
+              delay="0.3s"
+            />
+            <StudentVideoCard 
+              videoUrl="https://asffo800kc6xioqb.public.blob.vercel-storage.com/video-output-41CD5073-C8FC-418E-A45C-6188EDC1DA0C-1.mov"
+              title="Career Launch"
+              delay="0.4s"
+            />
           </div>
+
         </div>
+        <Script src="https://player.vimeo.com/api/player.js" strategy="lazyOnload" />
       </section>
 
+
       {/* Final CTA Section */}
-      <section className="py-40 bg-gradient-to-b from-[#0a0a0a] to-[#0e0e0e] border-t border-white/5 relative overflow-hidden">
-        <div className="max-w-4xl mx-auto px-8 text-center relative z-10 fade-up">
+      <section className="py-24 lg:py-40 bg-gradient-to-b from-[#0a0a0a] to-[#0e0e0e] border-t border-white/5 relative overflow-hidden">
+        <div className="max-w-4xl mx-auto px-6 md:px-8 text-center relative z-10 fade-up">
           <h2 className="font-headline text-4xl md:text-6xl font-bold mb-10 text-white uppercase tracking-tighter leading-tight italic">
             Ready to <span className="gold-shimmer not-italic">Enroll?</span>
           </h2>
