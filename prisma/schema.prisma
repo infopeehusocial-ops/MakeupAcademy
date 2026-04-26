@@ -1,0 +1,37 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  engineType = "library"
+  binaryTargets = ["native", "windows"]
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Admin {
+  id       String @id @default(uuid())
+  email    String @unique
+  password String
+}
+
+model Lead {
+  id        String   @id @default(uuid())
+  regId     String?  @unique
+  name      String
+  phone     String
+  email     String?
+  course    String
+  message   String?
+  status    Status   @default(NEW)
+  createdAt DateTime @default(now())
+}
+
+enum Status {
+  NEW
+  CONTACTED
+  CONVERTED
+  CLOSED
+}

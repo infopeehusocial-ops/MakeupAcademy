@@ -12,10 +12,10 @@ export default function Home() {
         {/* Floating Particles */}
         <HeroParticles />
 
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 fade-up">
           <Image 
             alt="Peehu's Makeover - High Fashion Artistry" 
-            className="w-full h-full object-cover object-center opacity-40 mix-blend-luminosity" 
+            className="w-full h-full object-cover object-center opacity-40 bw-reveal-image" 
             src="https://i.pinimg.com/736x/97/98/80/979880aca9bde71cbf1b2dd90ce89701.jpg"
             fill
             priority
@@ -80,7 +80,7 @@ export default function Home() {
               </h2>
               <div className="space-y-6 md:space-y-8 font-body text-base md:text-lg text-white/40 leading-relaxed max-w-xl mx-auto lg:mx-0">
                 <p>
-                  Peehu Deka Makeup Academy is a leading makeup academy in Guwahati, dedicated to training aspiring makeup artists with practical, industry-focused knowledge.
+                   Peehu Deka Makeup Academy is a leading makeup academy in Guwahati, dedicated to training aspiring makeup artists with practical, industry-focused knowledge.
                 </p>
                 <p>
                   We combine traditional Indian beauty techniques with modern trends to prepare students for real-world opportunities in bridal, fashion, and media industries.
@@ -145,7 +145,7 @@ export default function Home() {
                 <div className="aspect-[4/5] mb-8 overflow-hidden bg-[#0a0a0a] relative group">
                   <Image 
                     alt={course.title} 
-                    className="w-full h-full object-cover opacity-80 transition-transform duration-1000 group-hover:scale-110" 
+                    className="w-full h-full object-cover bw-reveal-image transition-transform duration-1000 group-hover:scale-110" 
                     src={course.img} 
                     fill 
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

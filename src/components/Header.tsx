@@ -1,12 +1,13 @@
 "use client";
-// updated for deployment
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     let isMounted = true;
@@ -52,7 +53,7 @@ export default function Header() {
             {navLinks.map((link) => (
               <Link
                 key={link.name}
-                className="nav-link font-headline tracking-[0.1em] text-xs font-semibold text-white/70 hover:text-primary transition-colors duration-500 uppercase"
+                className={`nav-link font-headline tracking-[0.1em] text-xs font-semibold transition-colors duration-500 uppercase ${pathname === link.href ? 'text-primary active' : 'text-white/70 hover:text-primary'}`}
                 href={link.href}
               >
                 {link.name}

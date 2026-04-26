@@ -49,7 +49,7 @@ export default function Courses() {
                 <div className="aspect-[4/5] lg:aspect-[16/10] relative overflow-hidden luxury-card border border-white/5 bg-[#141414]">
                   <Image 
                     alt={course.title} 
-                    className="w-full h-full object-cover grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-[2s]" 
+                    className="w-full h-full object-cover bw-reveal-image group-hover:scale-105 transition-all duration-[2s]" 
                     src={course.image}
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"

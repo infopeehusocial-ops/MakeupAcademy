@@ -166,10 +166,10 @@ export default function Portfolio() {
     <div className="bg-[#0a0a0a] text-white antialiased min-h-screen selection:bg-primary selection:text-black">
       {/* Hero Section */}
       <section className="relative w-full min-h-[700px] flex items-center justify-center bg-[#0a0a0a] overflow-hidden">
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 fade-up">
           <Image 
             alt="Portfolio Mastery" 
-            className="w-full h-full object-cover opacity-40 mix-blend-luminosity" 
+            className="w-full h-full object-cover opacity-40 bw-reveal-image" 
             src="https://asffo800kc6xioqb.public.blob.vercel-storage.com/u65hdcauburo6s9pktzl.webp"
             fill
             priority
@@ -232,7 +232,7 @@ export default function Portfolio() {
                   <div className="relative w-full">
                     <img 
                       alt={item.title} 
-                      className="w-full h-auto object-contain transition-transform duration-[1.5s] grayscale group-hover:grayscale-0 group-hover:scale-105" 
+                      className="w-full h-auto object-contain transition-transform duration-[1.5s] bw-reveal-image group-hover:scale-105" 
                       src={item.image || ""}
                       loading="lazy"
                     />

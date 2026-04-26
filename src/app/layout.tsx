@@ -63,7 +63,7 @@ export default function RootLayout({
             </div>
           </div>
           <div className="px-12 max-w-7xl mx-auto border-t border-white/5 pt-8">
-            <p className="font-body leading-relaxed text-sm text-white/20">© 2024 Peehu Deka Makeup Academy. Guwahati, India.</p>
+            <p className="font-body leading-relaxed text-sm text-white/20">© 2026 Peehu Deka Makeup Academy. Guwahati, India.</p>
           </div>
         </footer>
       </body>

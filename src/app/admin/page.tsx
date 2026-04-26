@@ -1,60 +1,88 @@
 "use client";
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
-export default function Admin() {
-  const [leads, setLeads] = useState([]);
-  const [loading, setLoading] = useState(true);
+export default function AdminLogin() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
+  const router = useRouter();
 
-  useEffect(() => {
-    fetch('/api/leads')
-      .then(res => res.json())
-      .then(data => {
-        setLeads(data);
-        setLoading(false);
+  const handleLogin = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setError('');
+    setLoading(true);
+
+    try {
+      const res = await fetch('/api/admin/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password }),
       });
-  }, []);
+
+      const data = await res.json();
+
+      if (res.ok) {
+        localStorage.setItem('adminToken', data.token);
+        router.push('/admin/dashboard');
+      } else {
+        setError(data.details || data.error || 'Invalid credentials');
+      }
+    } catch (err) {
+      setError('Something went wrong. Please try again.');
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
-    <div className="section">
-      <div className="container">
-        <h1 className="section-title gold-text text-left mb-8">Lead Management</h1>
-        
-        {loading ? (
-          <p>Loading leads...</p>
-        ) : leads.length === 0 ? (
-          <div className="card text-center">
-            <p className="text-gray-500">No inquiries received yet.</p>
-          </div>
-        ) : (
-          <div className="overflow-x-auto">
-            <table className="w-full text-left" style={{ borderCollapse: 'collapse' }}>
-              <thead>
-                <tr style={{ borderBottom: '1px solid #333' }}>
-                  <th className="p-4 text-xs uppercase text-gray-500">Date</th>
-                  <th className="p-4 text-xs uppercase text-gray-500">Name</th>
-                  <th className="p-4 text-xs uppercase text-gray-500">Phone</th>
-                  <th className="p-4 text-xs uppercase text-gray-500">Course</th>
-                  <th className="p-4 text-xs uppercase text-gray-500">Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                {leads.map((lead: any) => (
-                  <tr key={lead.id} style={{ borderBottom: '1px solid #1a1a1a' }}>
-                    <td className="p-4 text-sm">{new Date(lead.timestamp).toLocaleDateString()}</td>
-                    <td className="p-4 font-bold">{lead.name}</td>
-                    <td className="p-4">{lead.phone}</td>
-                    <td className="p-4">{lead.course}</td>
-                    <td className="p-4">
-                      <span className="px-2 py-1 bg-gold text-xs font-bold rounded" style={{ background: 'var(--gold-start)', color: '#000' }}>
-                        {lead.status}
-                      </span>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+    <div className="min-h-screen bg-[#0a0a0a] flex items-center justify-center p-6">
+      <div className="w-full max-w-md bg-[#141414] border border-white/5 p-10 luxury-card rounded-sm">
+        <div className="text-center mb-10">
+          <span className="font-label text-xs tracking-[0.4em] text-primary uppercase mb-4 block">Secure Portal</span>
+          <h1 className="font-headline text-3xl font-bold uppercase tracking-tight text-white">Admin Login</h1>
+        </div>
+
+        {error && (
+          <div className="mb-6 p-4 bg-red-500/10 border border-red-500/20 text-red-500 text-xs text-center uppercase tracking-widest font-bold">
+            {error}
           </div>
         )}
+
+        <form onSubmit={handleLogin} className="space-y-8">
+          <div className="space-y-4">
+            <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/30">Email Address</label>
+            <input 
+              type="email" 
+              required 
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="w-full bg-transparent border-b border-white/10 focus:border-primary px-0 py-4 text-xl outline-none transition-all placeholder:text-white/5" 
+              placeholder="admin@academy.com" 
+            />
+          </div>
+
+          <div className="space-y-4">
+            <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/30">Password</label>
+            <input 
+              type="password" 
+              required 
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="w-full bg-transparent border-b border-white/10 focus:border-primary px-0 py-4 text-xl outline-none transition-all placeholder:text-white/5" 
+              placeholder="••••••••" 
+            />
+          </div>
+
+          <button 
+            type="submit" 
+            disabled={loading}
+            className="w-full bg-primary text-black py-5 text-[10px] font-bold uppercase tracking-[0.2em] gold-button-glow pulse-ring transition-all disabled:opacity-50"
+          >
+            {loading ? 'Authenticating...' : 'Access Dashboard'}
+          </button>
+        </form>
       </div>
     </div>
   );
