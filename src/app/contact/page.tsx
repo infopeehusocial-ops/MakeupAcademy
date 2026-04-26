@@ -73,7 +73,9 @@ export default function Contact() {
         body: JSON.stringify({ ...formData, course: formData.subject }),
       });
       if (response.ok) {
-        router.push(`/thank-you?name=${encodeURIComponent(formData.name)}&phone=${encodeURIComponent(formData.phone)}&program=${encodeURIComponent(formData.subject)}`);
+        const result = await response.json();
+        const regId = result.lead?.regId || '';
+        router.push(`/thank-you?name=${encodeURIComponent(formData.name)}&phone=${encodeURIComponent(formData.phone)}&program=${encodeURIComponent(formData.subject)}&regId=${encodeURIComponent(regId)}`);
       } else {
         const error = await response.json();
         alert(error.error || "Submission failed. Please try again.");

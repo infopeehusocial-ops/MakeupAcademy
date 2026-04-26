@@ -109,7 +109,9 @@ export default function Admissions() {
         body: JSON.stringify(formData),
       });
       if (response.ok) {
-        router.push(`/thank-you?name=${encodeURIComponent(formData.name)}&phone=${encodeURIComponent(formData.phone)}&program=${encodeURIComponent(formData.program)}`);
+        const result = await response.json();
+        const regId = result.lead?.regId || '';
+        router.push(`/thank-you?name=${encodeURIComponent(formData.name)}&phone=${encodeURIComponent(formData.phone)}&program=${encodeURIComponent(formData.program)}&regId=${encodeURIComponent(regId)}`);
       } else {
         const error = await response.json();
         alert(error.error || "Submission failed. Please try again.");

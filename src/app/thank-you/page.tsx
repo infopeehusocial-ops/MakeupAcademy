@@ -4,18 +4,16 @@ import { useState, useEffect, Suspense } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
+// Luxury confirmation page for lead submissions
+
 function ThankYouContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
-  const [regId, setRegId] = useState('...');
-  
-  useEffect(() => {
-    setRegId((Math.random() * 10000).toFixed(0));
-  }, []);
   
   const name = searchParams.get('name') || 'Artist';
   const program = searchParams.get('program') || 'our program';
   const phone = searchParams.get('phone') || '';
+  const regId = searchParams.get('regId') || '...';
   
   const getProgramName = (id: string) => {
     switch (id) {
@@ -58,7 +56,7 @@ function ThankYouContent() {
           <div className="p-6 border border-white/5 bg-white/[0.02] text-left">
             <span className="text-[10px] uppercase tracking-widest text-white/30 block mb-2">Registration ID</span>
             <span className="font-headline text-sm font-bold text-white tracking-widest uppercase">
-              PD-{regId}
+              {regId.startsWith('PD-') ? regId : `PD-${regId}`}
             </span>
           </div>
           <div className="p-6 border border-white/5 bg-white/[0.02] text-left">

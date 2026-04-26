@@ -5,6 +5,7 @@ import Image from 'next/image';
 
 interface Lead {
   id: string;
+  regId: string | null;
   name: string;
   phone: string;
   email: string | null;
@@ -98,9 +99,11 @@ export default function AdminDashboard() {
   };
 
   const filteredLeads = leads.filter(lead => {
+    const searchStr = searchTerm.toLowerCase();
     const matchesSearch = 
-      lead.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
-      lead.phone.includes(searchTerm);
+      lead.name.toLowerCase().includes(searchStr) || 
+      lead.phone.includes(searchTerm) ||
+      (lead.regId && lead.regId.toLowerCase().includes(searchStr));
     const matchesStatus = statusFilter === 'ALL' || lead.status === statusFilter;
     return matchesSearch && matchesStatus;
   });
@@ -156,7 +159,7 @@ export default function AdminDashboard() {
             <label className="text-[9px] font-bold uppercase tracking-[0.3em] text-white/30">Search Records</label>
             <input 
               type="text" 
-              placeholder="Name or Phone..."
+              placeholder="Name, Phone, or ID (PD-XXXX)..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="w-full bg-[#141414] border border-white/5 focus:border-primary/50 p-4 text-sm outline-none transition-all placeholder:text-white/10"
@@ -184,6 +187,7 @@ export default function AdminDashboard() {
             <table className="w-full text-left">
               <thead>
                 <tr className="border-b border-white/5 bg-white/2 text-[9px] uppercase tracking-[0.3em] text-white/30">
+                  <th className="px-8 py-6 font-bold">ID</th>
                   <th className="px-8 py-6 font-bold">Inquirer</th>
                   <th className="px-8 py-6 font-bold">Contact</th>
                   <th className="px-8 py-6 font-bold">Interest</th>
@@ -194,6 +198,9 @@ export default function AdminDashboard() {
               <tbody className="divide-y divide-white/5">
                 {filteredLeads.map((lead) => (
                   <tr key={lead.id} className="group hover:bg-white/[0.02] transition-colors">
+                    <td className="px-8 py-6">
+                      <span className="font-headline text-[10px] font-bold text-white tracking-[0.2em]">{lead.regId || 'N/A'}</span>
+                    </td>
                     <td className="px-8 py-6">
                       <p className="font-bold text-white tracking-widest uppercase text-xs mb-1">{lead.name}</p>
                       <p className="text-[10px] text-white/20">{new Date(lead.createdAt).toLocaleDateString()}</p>

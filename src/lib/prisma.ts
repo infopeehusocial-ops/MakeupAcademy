@@ -30,5 +30,5 @@ export const getPrismaClient = () => {
 };
 
 // Use a getter to support existing imports while allowing lazy init
-export const prisma = (global as any).prisma || getPrismaClient();
-if (process.env.NODE_ENV !== 'production') (global as any).prisma = prisma;
+export const prisma = (global as any).prisma_v2 || getPrismaClient();
+if (process.env.NODE_ENV !== 'production') (global as any).prisma_v2 = prisma;
