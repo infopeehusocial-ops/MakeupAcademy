@@ -1,7 +1,7 @@
 const { PrismaClient } = require('@prisma/client');
 const bcrypt = require('bcrypt');
 require('dotenv').config();
-
+//test
 const prisma = new PrismaClient({
   datasource: {
     url: process.env.DATABASE_URL,
