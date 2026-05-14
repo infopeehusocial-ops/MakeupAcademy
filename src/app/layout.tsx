@@ -50,8 +50,8 @@ export default function RootLayout({
             <div className="fade-up" style={{ transitionDelay: '0.2s' }}>
               <h4 className="font-headline leading-relaxed text-sm font-bold text-[#c9a84c] mb-6 uppercase tracking-widest">Connect</h4>
               <ul className="space-y-4">
-                <li><a className="nav-link w-fit font-body leading-relaxed text-sm text-white/50 hover:text-white transition-all duration-300" href="#">Instagram</a></li>
-                <li><a className="nav-link w-fit font-body leading-relaxed text-sm text-white/50 hover:text-white transition-all duration-300" href="#">Facebook</a></li>
+                <li><a className="nav-link w-fit font-body leading-relaxed text-sm text-white/50 hover:text-white transition-all duration-300" href="https://www.instagram.com/peehudekamakeupstudioandacdemy?igsh=NW04OXRkNnR4YW9i" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                <li><a className="nav-link w-fit font-body leading-relaxed text-sm text-white/50 hover:text-white transition-all duration-300" href="https://www.facebook.com/profile.php?id=61586366545995" target="_blank" rel="noopener noreferrer">Facebook</a></li>
               </ul>
             </div>
             <div className="fade-up" style={{ transitionDelay: '0.4s' }}>

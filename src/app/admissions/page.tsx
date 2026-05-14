@@ -195,14 +195,14 @@ export default function Admissions() {
                             <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/30">Your Name</label>
                             {errors.name && <span className="text-[9px] text-red-500 uppercase tracking-widest font-bold">{errors.name}</span>}
                           </div>
-                          <input name="name" required value={formData.name} onChange={handleInputChange} className={`w-full bg-transparent border-b ${errors.name ? 'border-red-500/50' : 'border-white/10'} focus:border-primary px-0 py-3 md:py-4 text-lg md:text-xl outline-none transition-all placeholder:text-white/10`} placeholder="Full name" />
+                          <input name="name" required value={formData.name} onChange={handleInputChange} className={`w-full bg-transparent border-b ${errors.name ? 'border-red-500/50' : 'border-white/20'} focus:border-primary px-0 py-3 md:py-4 text-lg md:text-xl text-white outline-none transition-all placeholder:text-white/30`} placeholder="Full name" />
                         </div>
                         <div className="space-y-3 md:space-y-4">
                           <div className="flex justify-between items-end">
                             <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/30">Contact Number</label>
                             {errors.phone && <span className="text-[9px] text-red-500 uppercase tracking-widest font-bold">{errors.phone}</span>}
                           </div>
-                          <input name="phone" required value={formData.phone} onChange={handleInputChange} className={`w-full bg-transparent border-b ${errors.phone ? 'border-red-500/50' : 'border-white/10'} focus:border-primary px-0 py-3 md:py-4 text-lg md:text-xl outline-none transition-all placeholder:text-white/10`} placeholder="10-digit number" />
+                          <input name="phone" required value={formData.phone} onChange={handleInputChange} className={`w-full bg-transparent border-b ${errors.phone ? 'border-red-500/50' : 'border-white/20'} focus:border-primary px-0 py-3 md:py-4 text-lg md:text-xl text-white outline-none transition-all placeholder:text-white/30`} placeholder="10-digit number" />
                         </div>
                       </div>
                     </div>
@@ -214,7 +214,7 @@ export default function Admissions() {
                           <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/30">Select Program</label>
                           {errors.program && <span className="text-[9px] text-red-500 uppercase tracking-widest font-bold">{errors.program}</span>}
                         </div>
-                        <select name="program" required value={formData.program} onChange={handleInputChange} className={`w-full bg-transparent border-b ${errors.program ? 'border-red-500/50' : 'border-white/10'} focus:border-primary px-0 py-3 md:py-4 text-lg md:text-xl outline-none transition-all appearance-none cursor-pointer`}>
+                        <select name="program" required value={formData.program} onChange={handleInputChange} className={`w-full bg-transparent border-b ${errors.program ? 'border-red-500/50' : 'border-white/20'} focus:border-primary px-0 py-3 md:py-4 text-lg md:text-xl text-white outline-none transition-all appearance-none cursor-pointer`}>
                           <option value="" disabled className="bg-[#141414]">Focus of study</option>
                           <option value="bridal" className="bg-[#141414]">Advanced Bridal (12 Weeks)</option>
                           <option value="airbrush" className="bg-[#141414]">HD Airbrush Mastery (8 Weeks)</option>
@@ -227,7 +227,7 @@ export default function Admissions() {
                      <div className={`space-y-8 md:space-y-12 transition-all duration-700 w-full ${currentStep === 2 ? 'opacity-100 translate-x-0 relative z-10' : 'opacity-0 absolute inset-0 translate-x-full pointer-events-none z-0'}`}>
                       <div className="space-y-3 md:space-y-4">
                         <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/30">Artistic Vision / Background</label>
-                        <textarea name="vision" value={formData.vision} onChange={handleInputChange} className="w-full bg-transparent border-b border-white/10 focus:border-primary px-0 py-3 md:py-4 text-lg md:text-xl outline-none transition-all resize-none placeholder:text-white/10" rows={2} placeholder="Share your experience or goals" />
+                        <textarea name="vision" value={formData.vision} onChange={handleInputChange} className="w-full bg-transparent border-b border-white/20 focus:border-primary px-0 py-3 md:py-4 text-lg md:text-xl text-white outline-none transition-all resize-none placeholder:text-white/30" rows={2} placeholder="Share your experience or goals" />
                       </div>
                       <div className="flex items-center gap-4 group cursor-pointer" onClick={() => handleInputChange({ target: { name: 'callback', value: !formData.callback, type: 'checkbox', checked: !formData.callback } })}>
                          <div className={`w-5 h-5 border flex items-center justify-center transition-all ${formData.callback ? 'bg-primary border-primary' : 'border-white/20'}`}>

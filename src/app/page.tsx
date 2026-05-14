@@ -222,10 +222,10 @@ export default function Home() {
             Join Peehu Deka Makeup Academy in Guwahati and start your career in makeup artistry. Call or WhatsApp to enroll today.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-8 mt-12">
-            <a className="px-12 py-5 bg-gradient-to-r from-primary to-primary-dark text-black font-bold tracking-[0.2em] uppercase text-xs flex items-center justify-center gap-3 gold-button-glow pulse-ring transition-all" href="tel:+919678000000">
+            <a className="px-12 py-5 bg-gradient-to-r from-primary to-primary-dark text-black font-bold tracking-[0.2em] uppercase text-xs flex items-center justify-center gap-3 gold-button-glow pulse-ring transition-all" href="tel:9181032456">
               <span className="material-symbols-outlined text-xl">call</span> CALL TO ENROLL
             </a>
-            <a className="px-12 py-5 border border-primary/40 text-primary font-bold tracking-[0.2em] uppercase text-xs flex items-center justify-center gap-3 hover:bg-primary/5 transition-all duration-500" href="https://wa.me/919678000000">
+            <a className="px-12 py-5 border border-primary/40 text-primary font-bold tracking-[0.2em] uppercase text-xs flex items-center justify-center gap-3 hover:bg-primary/5 transition-all duration-500" href="https://wa.me/9181032456">
               <span className="material-symbols-outlined text-xl">chat</span> WHATSAPP NOW
             </a>
           </div>

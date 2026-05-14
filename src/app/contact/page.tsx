@@ -155,14 +155,14 @@ export default function Contact() {
                         <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/30">Full Name</label>
                         {errors.name && <span className="text-[9px] text-red-500 uppercase tracking-widest font-bold">{errors.name}</span>}
                       </div>
-                      <input name="name" required value={formData.name} onChange={handleInputChange} className={`w-full bg-transparent border-b ${errors.name ? 'border-red-500/50' : 'border-white/10'} focus:border-primary px-0 py-4 text-xl outline-none transition-all placeholder:text-white/5`} placeholder="Jane Doe" />
+                      <input name="name" required value={formData.name} onChange={handleInputChange} className={`w-full bg-transparent border-b ${errors.name ? 'border-red-500/50' : 'border-white/20'} focus:border-primary px-0 py-4 text-xl text-white outline-none transition-all placeholder:text-white/30`} placeholder="Jane Doe" />
                     </div>
                     <div className="space-y-4">
                       <div className="flex justify-between items-end">
                         <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/30">Phone Number</label>
                         {errors.phone && <span className="text-[9px] text-red-500 uppercase tracking-widest font-bold">{errors.phone}</span>}
                       </div>
-                      <input name="phone" required value={formData.phone} onChange={handleInputChange} className={`w-full bg-transparent border-b ${errors.phone ? 'border-red-500/50' : 'border-white/10'} focus:border-primary px-0 py-4 text-xl outline-none transition-all placeholder:text-white/5`} placeholder="10-digit number" />
+                      <input name="phone" required value={formData.phone} onChange={handleInputChange} className={`w-full bg-transparent border-b ${errors.phone ? 'border-red-500/50' : 'border-white/20'} focus:border-primary px-0 py-4 text-xl text-white outline-none transition-all placeholder:text-white/30`} placeholder="10-digit number" />
                     </div>
                   </div>
 
@@ -171,7 +171,7 @@ export default function Contact() {
                       <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/30">Program of Interest</label>
                       {errors.subject && <span className="text-[9px] text-red-500 uppercase tracking-widest font-bold">{errors.subject}</span>}
                     </div>
-                    <select name="subject" required value={formData.subject} onChange={handleInputChange} className={`w-full bg-transparent border-b ${errors.subject ? 'border-red-500/50' : 'border-white/10'} focus:border-primary px-0 py-4 text-xl outline-none transition-all appearance-none cursor-pointer`}>
+                    <select name="subject" required value={formData.subject} onChange={handleInputChange} className={`w-full bg-transparent border-b ${errors.subject ? 'border-red-500/50' : 'border-white/20'} focus:border-primary px-0 py-4 text-xl text-white outline-none transition-all appearance-none cursor-pointer`}>
                       <option value="" disabled className="bg-[#0a0a0a]">Select a program</option>
                       <option value="bridal" className="bg-[#0a0a0a]">Advanced Bridal Mastery</option>
                       <option value="airbrush" className="bg-[#0a0a0a]">HD Airbrush Pro</option>
@@ -181,7 +181,7 @@ export default function Contact() {
 
                   <div className="space-y-4">
                     <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/30">Your Vision (Optional)</label>
-                    <textarea name="message" value={formData.message} onChange={handleInputChange} className="w-full bg-transparent border-b border-white/10 focus:border-primary px-0 py-4 text-xl outline-none transition-all resize-none placeholder:text-white/5" rows={2} placeholder="Tell us about your goals" />
+                    <textarea name="message" value={formData.message} onChange={handleInputChange} className="w-full bg-transparent border-b border-white/20 focus:border-primary px-0 py-4 text-xl text-white outline-none transition-all resize-none placeholder:text-white/30" rows={2} placeholder="Tell us about your goals" />
                   </div>
 
                   <button type="submit" disabled={isSubmitting} className="w-full bg-primary text-black py-5 text-[10px] font-bold uppercase tracking-[0.2em] gold-button-glow pulse-ring transition-all disabled:opacity-50">

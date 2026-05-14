@@ -10,7 +10,7 @@ export default function WhatsAppButton() {
     return () => clearTimeout(timer);
   }, []);
 
-  const phoneNumber = "919678000000"; // Replace with actual number if provided
+  const phoneNumber = "9181032456"; // Updated to exact number provided
   const message = "Hi! I'm interested in joining Peehu Deka Makeup Academy. Could you please share more details?";
 
   // Always render to allow CSS transitions
