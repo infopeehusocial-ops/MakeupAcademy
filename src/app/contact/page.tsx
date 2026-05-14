@@ -105,9 +105,9 @@ export default function Contact() {
 
       <main className="relative z-10 px-8 lg:px-24 pt-48 pb-32 max-w-[1920px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-20 items-center">
         {/* Left Content */}
-        <div className="lg:col-span-5 fade-up visible">
+        <div className="lg:col-span-6 fade-up visible">
           <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-primary mb-8 block">Admissions Open</span>
-          <h1 className="font-headline text-5xl md:text-8xl font-bold tracking-tight leading-[1.1] mb-10">
+          <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-tight leading-[1.1] mb-10">
             Begin Your <br />
             <span className="gold-shimmer italic font-light">Transformation.</span>
           </h1>
@@ -126,7 +126,7 @@ export default function Contact() {
         </div>
 
         {/* Right: Inquire Now Form */}
-        <div className="lg:col-span-7">
+        <div className="lg:col-span-6">
           {submitted ? (
              <div className="bg-[#141414]/40 backdrop-blur-3xl p-16 lg:p-24 border border-white/5 text-center flex flex-col items-center justify-center min-h-[600px] fade-up visible luxury-card">
                 <div className="w-20 h-20 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center mb-10 pulse-ring">

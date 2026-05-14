@@ -6,22 +6,25 @@ export default function Courses() {
       title: "Bridal Makeup Course",
       category: "Professional Mastery",
       description: "Learn complete bridal makeup techniques including Assamese, Bengali, and North Indian bridal styles. Get hands-on training in draping, skin prep, and client handling.",
-      image: "https://i.pinimg.com/736x/22/2c/0d/222c0d99123e603e32d2b38bb7636e7b.jpg",
-      side: "left"
+      image: "https://asffo800kc6xioqb.public.blob.vercel-storage.com/k2fd3rinaaasathxjvuv.webp",
+      side: "left",
+      objectPosition: "object-top"
     },
     {
       title: "HD Airbrush Course",
       category: "Cinematic Excellence",
       description: "Master HD and airbrush makeup used in weddings, fashion shoots, and media. Learn to create flawless, camera-ready looks for real-world excellence.",
-      image: "https://i.pinimg.com/736x/66/cf/79/66cf7979a9db72bf4b78884c3f8238b8.jpg",
-      side: "right"
+      image: "https://asffo800kc6xioqb.public.blob.vercel-storage.com/709B79A6-F684-4A11-A6BF-EF286AE1B4CC.jpg",
+      side: "right",
+      objectPosition: "object-center"
     },
     {
       title: "Fashion & Editorial Makeup",
       category: "Creative Vision",
       description: "Explore creative and high-end makeup styles for fashion shoots, runway shows, and media projects. Master textures and high-concept aesthetics.",
-      image: "https://i.pinimg.com/1200x/f4/da/cf/f4dacfc00eb330441b096f28b4f0d9a2.jpg",
-      side: "left"
+      image: "https://asffo800kc6xioqb.public.blob.vercel-storage.com/canvos6xq0jhkftnccvp.webp",
+      side: "left",
+      objectPosition: "object-top"
     }
   ];
 
@@ -49,7 +52,7 @@ export default function Courses() {
                 <div className="aspect-[4/5] lg:aspect-[16/10] relative overflow-hidden luxury-card border border-white/5 bg-[#141414]">
                   <Image 
                     alt={course.title} 
-                    className="w-full h-full object-cover bw-reveal-image group-hover:scale-105 transition-all duration-[2s]" 
+                    className={`w-full h-full object-cover ${course.objectPosition} bw-reveal-image group-hover:scale-105 transition-all duration-[2s]`} 
                     src={course.image}
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"

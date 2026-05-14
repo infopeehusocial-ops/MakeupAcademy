@@ -100,8 +100,8 @@ export default function Home() {
                   <p className="font-label text-[10px] uppercase tracking-widest text-white/30">Trained</p>
                </div>
                <div className="bg-[#141414] p-6 md:p-10 border border-white/5 luxury-card">
-                  <h3 className="gold-shimmer text-4xl md:text-5xl font-bold mb-2">95%</h3>
-                  <p className="font-label text-[10px] uppercase tracking-widest text-white/30">Placements</p>
+                  <h3 className="gold-shimmer text-4xl md:text-5xl font-bold mb-2">100%</h3>
+                  <p className="font-label text-[10px] uppercase tracking-widest text-white/30">Industry Ready</p>
                </div>
                <div className="bg-[#141414] p-6 md:p-10 border border-white/5 luxury-card mt-8 md:mt-12">
                   <h3 className="gold-shimmer text-4xl md:text-5xl font-bold mb-2 text-3xl sm:text-4xl md:text-5xl">Elite</h3>
@@ -128,24 +128,27 @@ export default function Home() {
               {
                 title: "Bridal Mastery",
                 desc: "Learn complete techniques including Assamese, Bengali, and North Indian bridal styles. Hands-on training in draping, skin prep, and client handling.",
-                img: "https://i.pinimg.com/736x/22/2c/0d/222c0d99123e603e32d2b38bb7636e7b.jpg"
+                img: "https://asffo800kc6xioqb.public.blob.vercel-storage.com/k2fd3rinaaasathxjvuv.webp",
+                objPos: "object-top"
               },
               {
                 title: "HD Airbrush Pro",
                 desc: "Master HD and airbrush makeup used in weddings, fashion shoots, and media. Learn to create flawless, camera-ready looks for real-world excellence.",
-                img: "https://i.pinimg.com/736x/66/cf/79/66cf7979a9db72bf4b78884c3f8238b8.jpg"
+                img: "https://asffo800kc6xioqb.public.blob.vercel-storage.com/709B79A6-F684-4A11-A6BF-EF286AE1B4CC.jpg",
+                objPos: "object-center"
               },
               {
                 title: "Fashion & Editorial",
                 desc: "Explore creative and high-end makeup styles for fashion shoots, runway shows, and media projects. Master textures and high-concept aesthetics.",
-                img: "https://i.pinimg.com/1200x/f4/da/cf/f4dacfc00eb330441b096f28b4f0d9a2.jpg"
+                img: "https://asffo800kc6xioqb.public.blob.vercel-storage.com/canvos6xq0jhkftnccvp.webp",
+                objPos: "object-top"
               }
             ].map((course, i) => (
               <div key={i} className="luxury-card bg-[#141414] p-8 border border-white/5 fade-up" style={{ transitionDelay: `${i * 0.2}s` }}>
                 <div className="aspect-[4/5] mb-8 overflow-hidden bg-[#0a0a0a] relative group">
                   <Image 
                     alt={course.title} 
-                    className="w-full h-full object-cover bw-reveal-image transition-transform duration-1000 group-hover:scale-110" 
+                    className={`w-full h-full object-cover ${course.objPos} bw-reveal-image transition-transform duration-1000 group-hover:scale-110`} 
                     src={course.img} 
                     fill 
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
