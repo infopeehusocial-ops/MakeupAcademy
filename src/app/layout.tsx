@@ -14,9 +14,17 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Peehu's Makeover & Academy - Best Makeup Academy in Guwahati",
+  title: "Best Makeup Academy & Bridal Makeup Artist in Guwahati | Peehu Deka",
   description: "Learn professional makeup artistry in Guwahati with expert guidance and hands-on training. Professional courses in Bridal, HD Airbrush, and Editorial makeup.",
   keywords: "Best Makeup Academy in Guwahati, Makeup Courses in Guwahati, Bridal Makeup Training Guwahati, Peehu Deka, Peehu's Makeover",
+  openGraph: {
+    title: "Best Makeup Academy & Bridal Makeup Artist in Guwahati | Peehu Deka",
+    description: "Learn professional makeup artistry in Guwahati with expert guidance and hands-on training.",
+    images: ["https://asffo800kc6xioqb.public.blob.vercel-storage.com/u65hdcauburo6s9pktzl.webp"],
+    type: "website",
+    url: "https://www.peehudekamakeupstudioandacademy.com",
+    siteName: "Peehu Deka Makeup Studio and Academy",
+  }
 };
 
 export default function RootLayout({
@@ -28,6 +36,27 @@ export default function RootLayout({
     <html lang="en" className="dark scroll-smooth">
       <head>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": ["BeautySalon", "EducationalOrganization", "LocalBusiness"],
+              "name": "Peehu Deka Makeup Studio and Academy",
+              "image": "https://asffo800kc6xioqb.public.blob.vercel-storage.com/u65hdcauburo6s9pktzl.webp",
+              "telephone": "+9181032456",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Beltola",
+                "addressLocality": "Guwahati",
+                "addressRegion": "Assam",
+                "postalCode": "781028",
+                "addressCountry": "IN"
+              },
+              "url": "https://www.peehudekamakeupstudioandacademy.com"
+            })
+          }}
+        />
       </head>
       <body className={`${manrope.variable} antialiased bg-[#0a0a0a] text-[#f5f0e8] selection:bg-primary selection:text-black`}>
         <AnimationProvider />

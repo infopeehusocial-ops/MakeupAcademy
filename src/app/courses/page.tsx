@@ -1,4 +1,14 @@
 import Image from "next/image";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Professional Makeup Course in Guwahati | Peehu Deka Academy",
+  description: "Join the best professional makeup courses in Guwahati. Learn Bridal, HD Airbrush, and Editorial makeup with industry-leading certification.",
+  openGraph: {
+    title: "Professional Makeup Course in Guwahati | Peehu Deka Academy",
+    description: "Join the best professional makeup courses in Guwahati. Learn Bridal, HD Airbrush, and Editorial makeup.",
+  }
+};
 
 export default function Courses() {
   const courses = [
@@ -30,6 +40,22 @@ export default function Courses() {
 
   return (
     <div className="bg-[#0a0a0a] text-white selection:bg-primary selection:text-black pt-20 md:pt-32 lowercase-disabled">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Course",
+            "name": "Professional Bridal & HD Makeup Course",
+            "description": "Learn complete bridal makeup techniques, HD airbrush, and fashion editorial makeup at Peehu Deka Academy.",
+            "provider": {
+              "@type": "EducationalOrganization",
+              "name": "Peehu Deka Makeup Studio and Academy",
+              "sameAs": "https://www.peehudekamakeupstudioandacademy.com"
+            }
+          })
+        }}
+      />
       {/* Header */}
       <header className="px-6 md:px-8 max-w-7xl mx-auto py-12 md:py-20 text-center">
         <div className="fade-up">
