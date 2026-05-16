@@ -94,7 +94,7 @@ export default function Contact() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image 
-          src="https://i.pinimg.com/1200x/bf/f9/be/bff9bea01c35711b3ce8707acab2089c.jpg" 
+          src="https://asffo800kc6xioqb.public.blob.vercel-storage.com/IMG_7843.jpg" 
           alt="Studio Background" 
           fill 
           className="object-cover opacity-20"
@@ -117,7 +117,7 @@ export default function Contact() {
           
           <div className="hidden lg:block aspect-square relative max-w-sm border border-white/5 luxury-card overflow-hidden">
             <Image 
-              src="https://i.pinimg.com/736x/22/2c/0d/222c0d99123e603e32d2b38bb7636e7b.jpg" 
+              src="https://asffo800kc6xioqb.public.blob.vercel-storage.com/52040396-70A8-40B6-A807-8CEF0D498AF5.jpg" 
               alt="Artistry Sample" 
               fill 
               className="object-cover bw-reveal-image"

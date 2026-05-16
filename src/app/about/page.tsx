@@ -79,7 +79,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-4">
           <div className="md:col-span-2 luxury-card bg-[#1a1a1a] p-8 md:p-12 border border-white/5 flex flex-col justify-between h-[220px] md:h-[300px] fade-up relative overflow-hidden">
             <div className="absolute inset-0 opacity-10">
-               <Image alt="Texture" src="https://i.pinimg.com/1200x/bf/f9/be/bff9bea01c35711b3ce8707acab2089c.jpg" fill className="object-cover" sizes="(max-width: 1200px) 100vw, 50vw" />
+               <Image alt="Texture" src="https://asffo800kc6xioqb.public.blob.vercel-storage.com/IMG_7843.jpg" fill className="object-cover" sizes="(max-width: 1200px) 100vw, 50vw" />
             </div>
             <span className="material-symbols-outlined text-primary text-3xl md:text-4xl opacity-40 relative z-10">school</span>
             <div className="relative z-10">

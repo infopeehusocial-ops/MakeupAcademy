@@ -15,8 +15,8 @@ export default function Home() {
         <div className="absolute inset-0 z-0 fade-up">
           <Image 
             alt="Peehu's Makeover - High Fashion Artistry" 
-            className="w-full h-full object-cover object-center opacity-40 bw-reveal-image" 
-            src="https://i.pinimg.com/736x/97/98/80/979880aca9bde71cbf1b2dd90ce89701.jpg"
+            className="w-full h-full object-cover object-[50%_25%] opacity-40 bw-reveal-image scale-110 translate-x-8 md:translate-x-16" 
+            src="https://asffo800kc6xioqb.public.blob.vercel-storage.com/08C087E8-179D-49AD-AD02-10FAA16A8346.jpg"
             fill
             priority
             sizes="100vw"
@@ -25,8 +25,8 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-transparent to-transparent"></div>
         </div>
         
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center pt-24 lg:pt-20">
-          <div className="lg:col-span-10 lg:col-start-1 text-center lg:text-left">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center pt-24 lg:pt-20 pb-24 lg:pb-32">
+          <div className="lg:col-span-6 lg:col-start-1 text-center lg:text-left relative z-10">
             <div className="fade-up">
               <div className="flex items-center justify-center lg:justify-start gap-4 mb-8 md:mb-10">
                 <Image src="/logo.png" alt="Logo" width={40} height={40} className="w-8 h-8 md:w-10 md:h-10 object-contain" />
@@ -135,7 +135,7 @@ export default function Home() {
                 title: "HD Airbrush Pro",
                 desc: "Master HD and airbrush makeup used in weddings, fashion shoots, and media. Learn to create flawless, camera-ready looks for real-world excellence.",
                 img: "https://asffo800kc6xioqb.public.blob.vercel-storage.com/709B79A6-F684-4A11-A6BF-EF286AE1B4CC.jpg",
-                objPos: "object-center"
+                objPos: "object-top"
               },
               {
                 title: "Fashion & Editorial",

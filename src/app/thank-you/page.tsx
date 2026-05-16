@@ -29,7 +29,7 @@ function ThankYouContent() {
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
         <Image 
-          src="https://i.pinimg.com/1200x/bf/f9/be/bff9bea01c35711b3ce8707acab2089c.jpg" 
+          src="https://asffo800kc6xioqb.public.blob.vercel-storage.com/IMG_7843.jpg" 
           alt="Luxury background" 
           fill 
           className="object-cover"
