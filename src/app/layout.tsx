@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import Image from "next/image";
+import Link from "next/link";
 import "./globals.css";
 import AnimationProvider from "@/components/AnimationProvider";
 import Header from "@/components/Header";
@@ -57,8 +58,8 @@ export default function RootLayout({
             <div className="fade-up" style={{ transitionDelay: '0.4s' }}>
               <h4 className="font-headline leading-relaxed text-sm font-bold text-[#c9a84c] mb-6 uppercase tracking-widest">Legal</h4>
               <ul className="space-y-4">
-                <li><a className="nav-link w-fit font-body leading-relaxed text-sm text-white/50 hover:text-white transition-all duration-300" href="/privacy">Privacy Policy</a></li>
-                <li><a className="nav-link w-fit font-body leading-relaxed text-sm text-white/50 hover:text-white transition-all duration-300" href="/terms">Terms of Service</a></li>
+                <li><Link className="nav-link w-fit font-body leading-relaxed text-sm text-white/50 hover:text-white transition-all duration-300" href="/privacy">Privacy Policy</Link></li>
+                <li><Link className="nav-link w-fit font-body leading-relaxed text-sm text-white/50 hover:text-white transition-all duration-300" href="/terms">Terms of Service</Link></li>
               </ul>
             </div>
           </div>
