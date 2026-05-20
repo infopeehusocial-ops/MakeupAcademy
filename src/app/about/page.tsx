@@ -23,7 +23,7 @@ export default function About() {
                 <Image 
                   alt="Peehu Deka - Founder & Principal Educator" 
                   className="w-full h-full object-cover bw-reveal-image" 
-                  src="https://asffo800kc6xioqb.public.blob.vercel-storage.com/Peehu%E2%80%99s%20single%20photos%20%281%29.jpg"
+                  src="https://res.cloudinary.com/do77xdmz2/image/upload/f_auto,q_auto/v1779289107/Facetune_28-03-2026-13-26-25_r5uak8.jpg"
                   fill
                    priority
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -49,7 +49,7 @@ export default function About() {
             <div className="relative fade-up order-2 lg:order-1">
               <div className="aspect-square relative overflow-hidden border border-white/5 luxury-card group">
                 <Image 
-                  src="https://asffo800kc6xioqb.public.blob.vercel-storage.com/Peehu%E2%80%99s%20single%20photos%20%281%29.jpeg" 
+                  src="https://res.cloudinary.com/do77xdmz2/image/upload/f_auto,q_auto/v1779289103/Facetune_20-04-2026-12-21-40_uyfgdy.jpg" 
                   alt="Artistic Philosophy" 
                   fill 
                   className="object-cover bw-reveal-image"
@@ -79,7 +79,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-4">
           <div className="md:col-span-2 luxury-card bg-[#1a1a1a] p-8 md:p-12 border border-white/5 flex flex-col justify-between h-[220px] md:h-[300px] fade-up relative overflow-hidden">
             <div className="absolute inset-0 opacity-10">
-               <Image alt="Texture" src="https://asffo800kc6xioqb.public.blob.vercel-storage.com/IMG_7843.jpg" fill className="object-cover" sizes="(max-width: 1200px) 100vw, 50vw" />
+               <Image alt="Texture" src="https://res.cloudinary.com/do77xdmz2/image/upload/f_auto,q_auto/v1779289117/IMG_7843_jqu06e.jpg" fill className="object-cover" sizes="(max-width: 1200px) 100vw, 50vw" />
             </div>
             <span className="material-symbols-outlined text-primary text-3xl md:text-4xl opacity-40 relative z-10">school</span>
             <div className="relative z-10">
@@ -118,7 +118,7 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="group luxury-card bg-[#1a1a1a] aspect-[3/4] relative overflow-hidden fade-up">
               <Image 
-                src="https://asffo800kc6xioqb.public.blob.vercel-storage.com/Peehu%E2%80%99s%20single%20photos%20%281%29.jpg"
+                src="https://res.cloudinary.com/do77xdmz2/image/upload/f_auto,q_auto/v1779289107/Facetune_28-03-2026-13-26-25_r5uak8.jpg"
                 alt="Peehu Deka Portrait Collection 1"
                 fill
                 className="object-cover bw-reveal-image"
@@ -129,7 +129,7 @@ export default function About() {
             </div>
             <div className="group luxury-card bg-[#1a1a1a] aspect-[3/4] relative overflow-hidden fade-up transition-delay-200 lg:translate-y-12">
               <Image 
-                src="https://asffo800kc6xioqb.public.blob.vercel-storage.com/Peehu%E2%80%99s%20single%20photos%20%282%29.jpeg"
+                src="https://res.cloudinary.com/do77xdmz2/image/upload/f_auto,q_auto/v1779289104/Facetune_20-04-2026-12-33-25_lblk4u.jpg"
                 alt="Peehu Deka Portrait Collection 2"
                 fill
                 className="object-cover bw-reveal-image"
@@ -140,7 +140,7 @@ export default function About() {
             </div>
             <div className="group luxury-card bg-[#1a1a1a] aspect-[3/4] relative overflow-hidden fade-up transition-delay-400 lg:translate-y-24">
               <Image 
-                src="https://asffo800kc6xioqb.public.blob.vercel-storage.com/Peehu%E2%80%99s%20single%20photos%20%283%29.jpeg"
+                src="https://res.cloudinary.com/do77xdmz2/image/upload/f_auto,q_auto/v1779289103/Facetune_20-04-2026-12-23-14_uwhscm.jpg"
                 alt="Peehu Deka Portrait Collection 3"
                 fill
                 className="object-cover bw-reveal-image"

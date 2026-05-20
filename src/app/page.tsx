@@ -16,7 +16,7 @@ export default function Home() {
           <Image 
             alt="Peehu's Makeover - High Fashion Artistry" 
             className="w-full h-full object-cover object-[50%_25%] opacity-40 bw-reveal-image scale-110 translate-x-8 md:translate-x-16" 
-            src="https://asffo800kc6xioqb.public.blob.vercel-storage.com/08C087E8-179D-49AD-AD02-10FAA16A8346.jpg"
+            src="https://res.cloudinary.com/do77xdmz2/image/upload/f_auto,q_auto/v1779289000/08C087E8-179D-49AD-AD02-10FAA16A8346_jlrpwf.jpg"
             fill
             priority
             sizes="100vw"
@@ -128,19 +128,19 @@ export default function Home() {
               {
                 title: "Bridal Mastery",
                 desc: "Learn complete techniques including Assamese, Bengali, and North Indian bridal styles. Hands-on training in draping, skin prep, and client handling.",
-                img: "https://asffo800kc6xioqb.public.blob.vercel-storage.com/k2fd3rinaaasathxjvuv.webp",
+                img: "https://res.cloudinary.com/do77xdmz2/image/upload/f_auto,q_auto/v1777139070/k2fd3rinaaasathxjvuv_sxvvrg.webp",
                 objPos: "object-top"
               },
               {
                 title: "HD Airbrush Pro",
                 desc: "Master HD and airbrush makeup used in weddings, fashion shoots, and media. Learn to create flawless, camera-ready looks for real-world excellence.",
-                img: "https://asffo800kc6xioqb.public.blob.vercel-storage.com/709B79A6-F684-4A11-A6BF-EF286AE1B4CC.jpg",
+                img: "https://res.cloudinary.com/do77xdmz2/image/upload/f_auto,q_auto/v1779289001/709B79A6-F684-4A11-A6BF-EF286AE1B4CC_eghefs.jpg",
                 objPos: "object-top"
               },
               {
                 title: "Fashion & Editorial",
                 desc: "Explore creative and high-end makeup styles for fashion shoots, runway shows, and media projects. Master textures and high-concept aesthetics.",
-                img: "https://asffo800kc6xioqb.public.blob.vercel-storage.com/canvos6xq0jhkftnccvp.webp",
+                img: "https://res.cloudinary.com/do77xdmz2/image/upload/f_auto,q_auto/v1777139067/canvos6xq0jhkftnccvp_u3xlwp.webp",
                 objPos: "object-top"
               }
             ].map((course, i) => (
@@ -186,22 +186,22 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
             <StudentVideoCard 
-              videoUrl="https://asffo800kc6xioqb.public.blob.vercel-storage.com/67DA1573-1D3A-46D5-A7B5-BBBD0A6A9889.mov"
+              videoUrl="https://res.cloudinary.com/do77xdmz2/video/upload/f_auto,q_auto/v1779290351/67DA1573-1D3A-46D5-A7B5-BBBD0A6A9889_xhjx5i.mp4"
               title="Featured Success Story"
               delay="0.1s"
             />
             <StudentVideoCard 
-              videoUrl="https://asffo800kc6xioqb.public.blob.vercel-storage.com/video-output-3A16389F-C9E9-46B3-A0FE-B143DB4AFDB8-1.mov"
+              videoUrl="https://res.cloudinary.com/do77xdmz2/video/upload/f_auto,q_auto/v1779292324/video-output-3a16389f-c9e9-46b3-a0fe-b143db4afdb8-1-1_JrlQITWj_zphdrm.mp4"
               title="Student Journey"
               delay="0.2s"
             />
             <StudentVideoCard 
-              videoUrl="https://asffo800kc6xioqb.public.blob.vercel-storage.com/video-output-3BC8ADD5-CFE1-41B8-8F8A-CFC15986FFAC-1.mov"
+              videoUrl="https://res.cloudinary.com/do77xdmz2/video/upload/f_auto,q_auto/v1779291191/video-output-3BC8ADD5-CFE1-41B8-8F8A-CFC15986FFAC-1_1_mqsimw.mp4"
               title="Artist Transformation"
               delay="0.3s"
             />
             <StudentVideoCard 
-              videoUrl="https://asffo800kc6xioqb.public.blob.vercel-storage.com/video-output-41CD5073-C8FC-418E-A45C-6188EDC1DA0C-1.mov"
+              videoUrl="https://res.cloudinary.com/do77xdmz2/video/upload/f_auto,q_auto/v1779291520/video-output-41CD5073-C8FC-418E-A45C-6188EDC1DA0C-1_1_1_b0a8fx.mp4"
               title="Career Launch"
               delay="0.4s"
             />
