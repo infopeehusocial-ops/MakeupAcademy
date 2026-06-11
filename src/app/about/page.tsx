@@ -23,7 +23,7 @@ export default function About() {
                 <Image 
                   alt="Peehu Deka - Founder & Principal Educator" 
                   className="w-full h-full object-cover bw-reveal-image" 
-                  src="https://res.cloudinary.com/do77xdmz2/image/upload/f_auto,q_auto/v1779289107/Facetune_28-03-2026-13-26-25_r5uak8.jpg"
+                  src="https://res.cloudinary.com/do77xdmz2/image/upload/v1781196453/E2527873-8A1A-4263-B344-6E0709EB2A9D_1_j9ygny.webp"
                   fill
                    priority
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -49,7 +49,7 @@ export default function About() {
             <div className="relative fade-up order-2 lg:order-1">
               <div className="aspect-square relative overflow-hidden border border-white/5 luxury-card group">
                 <Image 
-                  src="https://res.cloudinary.com/do77xdmz2/image/upload/f_auto,q_auto/v1779289103/Facetune_20-04-2026-12-21-40_uyfgdy.jpg" 
+                  src="https://res.cloudinary.com/do77xdmz2/image/upload/v1781196453/DSC08203_11zon_uv8dtk.webp" 
                   alt="Artistic Philosophy" 
                   fill 
                   className="object-cover bw-reveal-image"
@@ -118,7 +118,7 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="group luxury-card bg-[#1a1a1a] aspect-[3/4] relative overflow-hidden fade-up">
               <Image 
-                src="https://res.cloudinary.com/do77xdmz2/image/upload/f_auto,q_auto/v1779289107/Facetune_28-03-2026-13-26-25_r5uak8.jpg"
+                src="https://res.cloudinary.com/do77xdmz2/image/upload/v1781196453/E2527873-8A1A-4263-B344-6E0709EB2A9D_1_j9ygny.webp"
                 alt="Peehu Deka Portrait Collection 1"
                 fill
                 className="object-cover bw-reveal-image"
@@ -129,7 +129,7 @@ export default function About() {
             </div>
             <div className="group luxury-card bg-[#1a1a1a] aspect-[3/4] relative overflow-hidden fade-up transition-delay-200 lg:translate-y-12">
               <Image 
-                src="https://res.cloudinary.com/do77xdmz2/image/upload/f_auto,q_auto/v1779289104/Facetune_20-04-2026-12-33-25_lblk4u.jpg"
+                src="https://res.cloudinary.com/do77xdmz2/image/upload/v1781196452/DSC08205_11zon_x14nkh.webp"
                 alt="Peehu Deka Portrait Collection 2"
                 fill
                 className="object-cover bw-reveal-image"
@@ -140,7 +140,7 @@ export default function About() {
             </div>
             <div className="group luxury-card bg-[#1a1a1a] aspect-[3/4] relative overflow-hidden fade-up transition-delay-400 lg:translate-y-24">
               <Image 
-                src="https://res.cloudinary.com/do77xdmz2/image/upload/f_auto,q_auto/v1779289103/Facetune_20-04-2026-12-23-14_uwhscm.jpg"
+                src="https://res.cloudinary.com/do77xdmz2/image/upload/v1781196451/DSC08451_11zon_yunmmk.webp"
                 alt="Peehu Deka Portrait Collection 3"
                 fill
                 className="object-cover bw-reveal-image"
