@@ -11,6 +11,7 @@ export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
+    email: '',
     subject: '',
     message: ''
   });
@@ -54,6 +55,11 @@ export default function Contact() {
       newErrors.phone = "Phone number is required";
     } else if (!validatePhone(formData.phone)) {
       newErrors.phone = "Enter a valid 10-digit number";
+    }
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = "Enter a valid email address";
     }
     if (!formData.subject) newErrors.subject = "Please select a program";
 
@@ -135,7 +141,7 @@ export default function Contact() {
                 <h2 className="font-headline text-4xl font-bold mb-6 gold-shimmer uppercase tracking-widest text-white">Inquiry Received</h2>
                 <p className="font-body text-white/40 max-w-sm mx-auto mb-16 leading-relaxed">Our admissions director will connect with you within 24 hours.</p>
                 <button 
-                  onClick={() => { setSubmitted(false); setFormData({ name: '', phone: '', subject: '', message: '' }); setErrors({}); }}
+                  onClick={() => { setSubmitted(false); setFormData({ name: '', phone: '', email: '', subject: '', message: '' }); setErrors({}); }}
                   className="px-12 py-5 border border-primary/30 text-primary font-bold text-xs uppercase tracking-[0.2em] gold-button-glow"
                 >
                   New inquiry
@@ -164,6 +170,14 @@ export default function Contact() {
                       </div>
                       <input name="phone" required value={formData.phone} onChange={handleInputChange} className={`w-full bg-transparent border-b ${errors.phone ? 'border-red-500/50' : 'border-white/20'} focus:border-primary px-0 py-4 text-xl text-white outline-none transition-all placeholder:text-white/30`} placeholder="10-digit number" />
                     </div>
+                  </div>
+
+                  <div className="space-y-4">
+                    <div className="flex justify-between items-end">
+                      <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/30">Email Address</label>
+                      {errors.email && <span className="text-[9px] text-red-500 uppercase tracking-widest font-bold">{errors.email}</span>}
+                    </div>
+                    <input type="email" name="email" required value={formData.email} onChange={handleInputChange} className={`w-full bg-transparent border-b ${errors.email ? 'border-red-500/50' : 'border-white/20'} focus:border-primary px-0 py-4 text-xl text-white outline-none transition-all placeholder:text-white/30`} placeholder="email@example.com" />
                   </div>
 
                   <div className="space-y-4">

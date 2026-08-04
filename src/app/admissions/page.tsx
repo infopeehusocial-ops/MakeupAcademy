@@ -11,6 +11,7 @@ export default function Admissions() {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
+    email: '',
     program: '',
     vision: '',
     callback: false
@@ -57,6 +58,11 @@ export default function Admissions() {
         newErrors.phone = "Phone number is required";
       } else if (!validatePhone(formData.phone)) {
         newErrors.phone = "Enter a valid 10-digit mobile number";
+      }
+      if (!formData.email.trim()) {
+        newErrors.email = "Email is required";
+      } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+        newErrors.email = "Enter a valid email address";
       }
     } else if (step === 1) {
       if (!formData.program) newErrors.program = "Please select a program";
@@ -165,7 +171,7 @@ export default function Admissions() {
                 <h2 className="font-headline text-3xl md:text-4xl font-bold mb-6 gold-shimmer uppercase tracking-widest px-4">Inquiry Received</h2>
                 <p className="font-body text-sm md:text-base text-white/40 max-w-sm mx-auto mb-12 md:mb-16 leading-relaxed">Our admissions director will contact you within 24 hours to schedule your portfolio review.</p>
                 <button 
-                  onClick={() => { setSubmitted(false); setCurrentStep(0); setFormData({ name: '', phone: '', program: '', vision: '', callback: false }); setErrors({}); }}
+                  onClick={() => { setSubmitted(false); setCurrentStep(0); setFormData({ name: '', phone: '', email: '', program: '', vision: '', callback: false }); setErrors({}); }}
                   className="w-full sm:w-auto px-12 py-5 border border-primary/30 text-primary font-bold text-xs uppercase tracking-[0.2em] gold-button-glow transition-all"
                 >
                   New inquiry
@@ -203,6 +209,13 @@ export default function Admissions() {
                             {errors.phone && <span className="text-[9px] text-red-500 uppercase tracking-widest font-bold">{errors.phone}</span>}
                           </div>
                           <input name="phone" required value={formData.phone} onChange={handleInputChange} className={`w-full bg-transparent border-b ${errors.phone ? 'border-red-500/50' : 'border-white/20'} focus:border-primary px-0 py-3 md:py-4 text-lg md:text-xl text-white outline-none transition-all placeholder:text-white/30`} placeholder="10-digit number" />
+                        </div>
+                        <div className="space-y-3 md:space-y-4 md:col-span-2">
+                          <div className="flex justify-between items-end">
+                            <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/30">Email Address</label>
+                            {errors.email && <span className="text-[9px] text-red-500 uppercase tracking-widest font-bold">{errors.email}</span>}
+                          </div>
+                          <input type="email" name="email" required value={formData.email} onChange={handleInputChange} className={`w-full bg-transparent border-b ${errors.email ? 'border-red-500/50' : 'border-white/20'} focus:border-primary px-0 py-3 md:py-4 text-lg md:text-xl text-white outline-none transition-all placeholder:text-white/30`} placeholder="email@example.com" />
                         </div>
                       </div>
                     </div>

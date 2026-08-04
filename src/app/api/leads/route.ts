@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
+import { sendConfirmationEmails } from '@/lib/email';
 
 export async function POST(req: Request) {
   try {
@@ -23,6 +24,19 @@ export async function POST(req: Request) {
         course: data.program || data.course || 'General Inquiry',
         message: data.vision || data.message || null,
       },
+    });
+
+    // Trigger confirmation emails in the background
+    sendConfirmationEmails({
+      name: newLead.name,
+      phone: newLead.phone,
+      email: newLead.email,
+      course: newLead.course,
+      vision: newLead.message,
+      regId: newLead.regId || '',
+      callback: !!data.callback,
+    }).catch((err) => {
+      console.error('Failed to send confirmation emails in background:', err);
     });
 
     return NextResponse.json({ success: true, lead: newLead });
